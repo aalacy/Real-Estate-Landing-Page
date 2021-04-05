@@ -7,7 +7,10 @@
   "main": "gulpfile.js",
   "scripts": {
     "start": "./node_modules/.bin/gulp",
-    "postinstall": "gulp deps"
+    "postinstall": "./node_modules/.bin/gulp build"
+  },
+  "engines": {
+    "node": "14.6.0"
   },
   "browserslist": "Safari > 10, Firefox > 40, Chrome > 40, ie >= 11",
   "eslintConfig": {
@@ -31,6 +34,7 @@
     "es-abstract": "^1.14.2",
     "flatpickr": "~4.6.1",
     "flickity": "~2.2.0",
+    "http-server": "^0.12.3",
     "inter-ui": "^3.9.0",
     "ion-rangeslider": "~2.3.0",
     "isotope-layout": "~3.0.6",

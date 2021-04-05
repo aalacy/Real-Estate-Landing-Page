@@ -324,9 +324,18 @@ gulp.task('serve', function (done) {
     server: {
       baseDir: './dist',
       index: "index.html"
-    }
+    },
+    port: process.env.PORT || 5000
   });
   done();
+});
+
+gulp.task('serveprod', function() {
+  connect.server({
+    root: './',
+    port: process.env.PORT || 5000, // localhost:5000
+    livereload: false
+  });
 });
 
 gulp.task('watch', function (done) {
